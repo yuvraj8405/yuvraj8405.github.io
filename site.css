@@ -1,60 +1,119 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
 body {
-    background-image: url("Pic1.jfif");
-    
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+.navbar, .navbar1 {
+  position: absolute;
+  width: 95%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  border-radius: 15px;
 }
 
 .navbar {
-    position: absolute;
-    bottom: 2vh; /* Adjusts the navbar's position from the bottom */
-    left: 50%; /* Positions the navbar in the middle of the screen */
-    transform: translateX(-50%); /* Centers the navbar horizontally */
-    background-color: rgb(0, 0, 0, 0); /* blank background */
-    padding: 10px 40px; /* Adjust padding to fit the content */
-    border-radius: 10px; /* Rounded corners for a floating effect */
+  bottom: 6vh; 
+  background-color: rgba(255, 255, 255, 0); 
+  padding: 10px 40px; 
 }
 
-.navbar ul {
-    text-align: center;
-    list-style-type: none; /* Removes bullet points from list */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
+.navbar1 {
+  top: 0.8cm; 
+  background: rgba(148, 148, 148, 0.1); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.navbar ul li {
-    display: inline-block;
-    margin: 0 30px;
+.navbar ul, .navbar1 ul {
+  list-style: none; 
+  display: flex; 
+  justify-content: center; 
 }
 
-.navbar ul li a {
-    text-decoration: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
-    font-family: monospace;
+.navbar li, .navbar1 ul li {
+  margin: 0 30px; 
 }
 
-.mypfp {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 30px;
-    margin-left: 30px;
+
+.navbar a, .navbar1 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 8px;
+  font-family: monospace;
+  font-size: 0.5cm;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition on hover */
 }
 
-.mypfp:hover { 
-    box-shadow: 0 0 50px #ffffff; 
-    opacity: 0.5;
+.navbar1 .logo {
+  height: 30px; 
+  margin-left: 3ch; 
 }
 
-.sidebar {
-    display: flex;
-    flex-direction: row;
-    background-color: #0f0f0f;
-    border-radius: 50px;
-    width: 50%;
-    margin-top: 1%;
-    margin-left: 35px;
+.navbar1 .logo1 {
+  height: 17px; 
 }
 
-.sidebar1 {
-    display: flex;
-    flex-direction: row;
+.text-link {
+  font-size: 17px; 
+  margin-left: 1.2ch; 
+  margin-right: 3ch; 
+}
+
+.navbar li a:hover, .navbar1 li a:hover {
+  color: #ff0000; 
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .navbar, .navbar1 {
+    flex-direction: column; /* Stack items vertically */
+  }
+  .navbar li, .navbar1 ul li {
+    margin: 10px 0; /* Adjust margin for mobile */
+  }
+}
+.social-links {
+  position: absolute; /* Position it absolutely to the right side */
+  top: 80px; /* Adjust based on your layout */
+  right: 20px; /* Space from the right edge */
+  background-color: rgb(255, 255, 255); /* Semi-transparent background */
+  color: rgb(0, 0, 0); /* Text color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding for content */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); /* Shadow for depth */
+}
+
+.social-links ul {
+  list-style: none; /* Remove bullet points */
+}
+
+.social-links li {
+  margin: 5px 0; /* Space between list items */
+}
+
+.social-links a {
+  color: #000000; /* White text */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-links a:hover {
+  color: #ff0000; /* Change color on hover */
 }
